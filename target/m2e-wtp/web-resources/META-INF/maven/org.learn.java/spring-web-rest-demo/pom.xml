@@ -1,0 +1,80 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.learn.java</groupId>
+  <artifactId>spring-web-rest-demo</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  
+  <properties>
+  <maven.compiler.source>1.8</maven.compiler.source>
+  <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+  
+  <dependencies>
+
+<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+<dependency>
+    <groupId>javax.servlet</groupId>
+    <artifactId>javax.servlet-api</artifactId>
+    <version>3.1.0</version>
+    <scope>provided</scope>
+</dependency>
+
+
+<!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-webmvc</artifactId>
+    <version>5.2.22.RELEASE</version>
+</dependency>
+
+  </dependencies>
+  
+  <build>
+  <finalName>spring-mvc-rest</finalName>
+  <pluginManagement>
+  <plugins>
+  
+  <plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-war-plugin</artifactId>
+  <version>3.2.1</version>
+  <configuration>
+  <failOnMissingWebXml>false</failOnMissingWebXml>
+  </configuration>
+  </plugin>
+  
+ <!--  <plugin>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>maven-boot-maven-plugin</artifactId>
+  <version>2.0.2.RELEASE</version>
+  <executions>
+  <execution>
+  <goals>
+  <goal>repackage</goal>
+  </goals>
+  </execution>
+  </executions>
+  </plugin>
+  
+  <plugin>
+  <groupId>io.github.swagger2markup</groupId>
+  <artifactId>swagger2markup-maven-plugin</artifactId>
+  <version>1.3.3</version>
+  <configuration>
+  <swaggerInput>http://localhost:8087/v2/api-docs</swaggerInput>
+  <outputDir>${project.build.directory}/docs/asciidoc</outputDir>
+  <config>
+  <swagger2markup.markupLanguage>ASCIIDOC</swagger2markup.markupLanguage>
+  </config>
+  </configuration>
+  </plugin> -->
+
+
+  </plugins>
+  </pluginManagement>
+  </build>
+  
+  
+  
+</project>
